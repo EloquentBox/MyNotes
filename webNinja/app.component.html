@@ -1,0 +1,8 @@
+{{ homeTitle }}
+
+<input [(ngModel)]="ninja.name">
+<p>{{ ninja.name }}</p>
+<p>{{ ninja.belt }}</p>
+<section>
+<app-home [uberninja] = uberNinja (onYell)="yell($event)"></app-home>
+</section>
