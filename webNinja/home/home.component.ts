@@ -6,14 +6,10 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Input() uberninja;
-  @Output() onYell = new EventEmitter();
-  fireYellEvent(e) {
-    this.onYell.emit(e);
-  }
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

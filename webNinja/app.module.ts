@@ -9,22 +9,29 @@ import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { DirectoryComponent } from './directory/directory.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent},
+  { path: 'directory/:ninja', component: DirectoryComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DirectoryComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
     BrowserModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     FontAwesomeModule,
     CommonModule,
-    FormsModule,
-
+    FormsModule
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [],

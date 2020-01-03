@@ -7,16 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  homeTitle = 'Welcome to the homepage...';
- ninja = {
-   name: 'Yoshi',
-   belt: 'black'
- };
- uberNinja = {
-   name: 'ryu',
-   belt: 'red'
- };
- yell(e) {
-   alert('I am yelling');
- }
 }
 
