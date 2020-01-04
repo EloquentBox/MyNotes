@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FindYrNinjaPipe } from './find-yr-ninja.pipe';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    FindYrNinjaPipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
